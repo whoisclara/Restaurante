@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+Sedes
+{% endblock%}
+
+{% block content %}
+<h1>Sedes </h1>
+<div id="map" style="height: 600px; width: 600px"></div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    var map = L.map('map').setView([6.242473710677006, -75.5892851649498], 15);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+    var marker = L.marker([6.245644417960897, -75.59639485738774]).addTo(map);
+    var marker2 = L.marker([6.235440468792276, -75.59131197116425]).addTo(map);
+    var marker3 = L.marker([6.2127112808077785, -75.57252748175729]).addTo(map);
+    var marker4 = L.marker([6.177756723521031, -75.58993951614879]).addTo(map);
+    var marker4 = L.marker([6.181406625566555, -75.59448312479601]).addTo(map);
+</script>
+{%endblock%}

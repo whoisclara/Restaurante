@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock%}
+
+{% block content %}
+<h1> Carta virtual </h1>
+<div class="d-flex flex-column align-items-center gap-3">
+    <a href="{% url 'carta' %}" class="btn btn-primary btn-lg w-100 d-flex justify-content-center align-items-center {% if request.path == '/menu/' %}active{% endif %}">
+        Ver menu
+      </a>  
+    
+    <a href="{% url 'ubicaciones' %}" class="btn btn-primary btn-lg w-100 d-flex justify-content-center align-items-center {% if request.path == '/ubicaciones/' %}active{% endif %}">
+        Ver ubicaciones
+      </a>
+
+    <a href="{% url 'sedes' %}" class="btn btn-primary btn-lg w-100 d-flex justify-content-center align-items-center {% if request.path == '/reservas/' %}active{% endif %}">
+        Reservar mesa
+      </a>
+    
+    <a href="{% url 'reservas' %}" class="btn btn-primary btn-lg w-100 d-flex justify-content-center align-items-center {% if request.path == '/proomciones/' %}active{% endif %}">
+        Promociones
+      </a>
+  </div>
+
+  <style>
+    .btn {
+      font-size: 2rem; 
+    }
+    .btn {
+      padding: 0.5rem 1rem; 
+    }
+  </style>
+  
+{% endblock %}

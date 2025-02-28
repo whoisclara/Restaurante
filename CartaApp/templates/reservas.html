@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+Reservas
+{% endblock %}
+
+{% block content %}
+<h1 id="titulo-reservas" class="titulo-principal" style="text-align: center;">Reservas </h1>
+<form>
+    <div class="mb-3">
+      <label for="Nombre" class="form-label">Nombre:</label>
+      <input type="text" class="form-control" id="exampleInputNombre" aria-describedby="nombreHelp">
+    </div>
+    <div class="mb-3">
+      <label for="fechaReserva" class="form-label">Fecha:</label>
+      <input type="datetime" class="form-control" id="exampleInputfechaReserva">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPersoonas" class="form-label">Numero de personas:</label>
+        <input type="number" class="form-control" id="exampleInputPersonas">
+      </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="exampleInputEmail">
+    </div>  
+    <button type="submit" class="btn btn-primary">Reservar</button>
+  </form>
+{% endblock %}
